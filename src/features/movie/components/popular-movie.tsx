@@ -4,7 +4,7 @@ import CardMovie from "./card-movie";
 import SkeletonCardMovie from "./skeleton-movie";
 
 const PopularMovies = () => {
-  const { data, isLoading, isError } = usePopularMoviesQuery();
+  const { data, isLoading } = usePopularMoviesQuery();
   return (
     <section className="flex flex-col text-start my-5 px-5">
       <h2 className="font-bold text-3xl text-white">Top Popular Movies</h2>

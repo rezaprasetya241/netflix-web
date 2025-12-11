@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
-import api from "../../../api/axios";
+import { useEffect } from "react";
 import { type Movie } from "../types/movie.types";
 import { truncate } from "../../../libs/utils";
 import { useUpcomingMoviesQuery } from "../api/useUpcominMoviesQuery";
 
 const HiglightMovie = () => {
-  const { data, isLoading, isError } = useUpcomingMoviesQuery();
+  const { data } = useUpcomingMoviesQuery();
 
   const getRandomMovie = (): Movie => {
     if (data?.results) {
